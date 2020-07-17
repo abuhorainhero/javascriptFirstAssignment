@@ -44,16 +44,16 @@ function brickCalculator (building) {
         return totalBricks;
     }
     else if (building >= 0 && building <= 20) {
-        var downTenBuildingBricks = 30000;
+        var extraDownTenBuildingBricks = 30000;
         var totalFeet = (building * 12);
-        var totalBricks = ((totalFeet * feetBricks) + downTenBuildingBricks);
+        var totalBricks = ((totalFeet * feetBricks) + extraDownTenBuildingBricks);
         return totalBricks;
     }    
     else if (building >= 0 && building >= 21) {
-        var downTenBuildingBricks = 50000;
-        var downTenToTwenty = 20000;
+        var extraDownTenBuildingBricks = 50000;
+        var extraDownElevenToTwentyBricks = 20000;
         var totalFeet = (building * 10);
-        var extraTotalBricks = (downTenBuildingBricks + downTenToTwenty);
+        var extraTotalBricks = (extraDownTenBuildingBricks + extraDownElevenToTwentyBricks);
         var totalBricks = ((totalFeet * feetBricks) + extraTotalBricks);
         return totalBricks;
     }
