@@ -45,16 +45,16 @@ function brickCalculator (building) {
     }
     else if (building >= 0 && building <= 20) {
         var downTenBuildingBricks = 30000;
-        totalFeet = (building * 12);
-        totalBricks = ((totalFeet * feetBricks) + downTenBuildingBricks);
+        var totalFeet = (building * 12);
+        var totalBricks = ((totalFeet * feetBricks) + downTenBuildingBricks);
         return totalBricks;
     }    
     else if (building >= 0 && building >= 21) {
-        downTenBuildingBricks = 30000;
+        var downTenBuildingBricks = 50000;
         var downTenToTwenty = 20000;
-        totalFeet = (building * 10);
+        var totalFeet = (building * 10);
         var extraTotalBricks = (downTenBuildingBricks + downTenToTwenty);
-        totalBricks = ((totalFeet * feetBricks) + extraTotalBricks);
+        var totalBricks = ((totalFeet * feetBricks) + extraTotalBricks);
         return totalBricks;
     }
     else {
@@ -74,3 +74,8 @@ function tinyFriend (nameArray) {
     }
     return smallName;  
 }
+
+// console.log("feet to mile : " , feetToMile(5000));
+// console.log("wood calculator : ", woodCalculator(30, 15, 12));
+// console.log("Brick calculator : ", brickCalculator(120));
+// console.log("friend array : ", tinyFriend(["rumi", "abu horain", "tusar", "abu"]));
